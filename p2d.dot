@@ -1,29 +1,74 @@
 #!/usr/bin/dot -Tpdf -o p2d.pdf
 /*
-    $Id: p2d.dot 12872 2006-10-31 16:59:40Z rohrmoser $
-
         See http://www.graphviz.org/Documentation.php
 */
 digraph G {
-        rankdir=LR;
+	rankdir=LR;
+	label="Piccolo2D Stammbaum";
+	p2d [label="piccolo2d", URL="http://piccolo2d.org", fillcolor=lightblue2, style=filled];
+	".net" [label=".NET", URL="http://de.wikipedia.org/wiki/.NET"];
+	"c++" [label="C++", URL="http://de.wikipedia.org/wiki/C%2B%2B"];
+	"local tools" [URL="http://doi.acm.org/10.1145/237091.237116"];
+	"pad++" [label="PAD++", URL="http://www.cs.umd.edu/hcil/pad++/"];
+	chevron [label=Chevron, URL="http://www.chevron.com/"];
+	darpa [label=DARPA, URL="http://www.nsf.gov/"];
+	gdi [label="GDI+", URL="http://de.wikipedia.org/wiki/GDI%2B"];
+	ge [label="Google Earth", URL="http://de.wikipedia.org/wiki/Google_Earth"];
+	grap [label="Graph", URL="http://de.wikipedia.org/wiki/Graph_(Graphentheorie)"];
+	java [label=Java, URL="http://de.wikipedia.org/wiki/Java_(Technik)"];
+	java2d [label=Java2D, URL="http://en.wikipedia.org/wiki/Java_2D"];
+	java3d [label=Java3D, URL="http://de.wikipedia.org/wiki/Java_3D"];
+	javafx [label=JavaFX, URL="http://de.wikipedia.org/wiki/JavaFX"];
+	jazz [URL="http://piccolo2d.org/learn/about.html"];
+	kidpad [label="KidPad", URL="http://www.cs.umd.edu/hcil/kiddesign/kidpad.shtml"];
+	ms [label="Microsoft Research", URL="http://research.microsoft.com/"];
+	nsf [label=NSF, URL="http://www.nsf.gov/"];
+	ogre [label=OGRE, URL="http://de.wikipedia.org/wiki/OGRE"];
+	opengl [label=OpenGL, URL="http://de.wikipedia.org/wiki/Opengl"];
+#	openvg [label=OpenVG, URL="http://de.wikipedia.org/wiki/OpenVG"];
+	osg [label=OpenSceneGraph, URL="http://en.wikipedia.org/wiki/OpenSceneGraph"];
+	posy [label=PhotoSynth, URL="http://www.ted.com/index.php/talks/blaise_aguera_y_arcas_demos_photosynth.html"];
+	scenegraph [URL="https://scenegraph.dev.java.net/"];
+	seadragon [label=SeaDragon, URL="http://en.wikipedia.org/wiki/DeepZoom"];
+	sg [label=Szenengraph, URL="http://de.wikipedia.org/wiki/Szenengraph"];
+	svg [label=SVG, URL="http://de.wikipedia.org/wiki/Scalable_Vector_Graphics"];
+	umd [label="University of Maryland", URL="http://www.cs.umd.edu/hcil/"];
+	zui [label=ZUI, URL="http://de.wikipedia.org/wiki/ZUI"];
 
-p2d -> hist;
-hist -> jazz;
-p2d -> zui;
-p2d -> jazz;
-zui -> "pad++";
-zui -> seadragon;
-zui -> kidpad;
-kidpad -> "local tools";
-p2d -> java2d;
+"pad++" -> "c++";
+"pad++" -> umd;
+"pad++" -> zui;
+gdi -> ".net";
+ge -> zui;
+java2d -> java;
 java2d -> opengl;
-p2d -> scenegraph;
-scenegraph -> javafx;
-scenegraph -> svg;
-svg -> openvg;
-openvg -> opengl;
-hist -> ms;
-hist -> darpa;
-hist -> nsf;
-hist -> chevron;
+java3d -> java;
+java3d -> opengl;
+java3d -> sg;
+javafx -> scenegraph;
+jazz -> "pad++";
+jazz -> chevron;
+jazz -> darpa;
+jazz -> java2d;
+jazz -> nsf;
+jazz -> sg;
+# jazz -> svg;
+kidpad -> "local tools";
+kidpad -> "pad++";
+ogre -> "c++";
+ogre -> opengl;
+ogre -> sg;
+osg -> "c++";
+osg -> opengl;
+osg -> sg;
+p2d -> gdi;
+p2d -> jazz;
+p2d -> ms;
+posy -> seadragon;
+scenegraph -> java2d;
+scenegraph -> sg;
+seadragon -> ms;
+seadragon -> zui;
+sg -> grap;
+svg -> sg;
 }
