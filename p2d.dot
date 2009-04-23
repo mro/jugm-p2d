@@ -1,0 +1,29 @@
+#!/usr/bin/dot -Tpdf -o p2d.pdf
+/*
+    $Id: p2d.dot 12872 2006-10-31 16:59:40Z rohrmoser $
+
+        See http://www.graphviz.org/Documentation.php
+*/
+digraph G {
+        rankdir=LR;
+
+p2d -> hist;
+hist -> jazz;
+p2d -> zui;
+p2d -> jazz;
+zui -> "pad++";
+zui -> seadragon;
+zui -> kidpad;
+kidpad -> "local tools";
+p2d -> java2d;
+java2d -> opengl;
+p2d -> scenegraph;
+scenegraph -> javafx;
+scenegraph -> svg;
+svg -> openvg;
+openvg -> opengl;
+hist -> ms;
+hist -> darpa;
+hist -> nsf;
+hist -> chevron;
+}
