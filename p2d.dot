@@ -2,10 +2,12 @@
 /*
         See http://www.graphviz.org/Documentation.php
 */
-digraph G {
+digraph "Piccolo2d Ueberblick" {
 	rankdir=LR;
+	graph [truecolor bgcolor="#95A7D4"]
 	label="Piccolo2D Stammbaum";
-	p2d [label="piccolo2d", URL="http://piccolo2d.org", fillcolor=lightblue2, style=filled];
+	pi2 [label="piccolo2d", URL="http://piccolo2d.org/", fillcolor=lightblue2, style=filled];
+	p2d [label="piccolo", URL="http://www.cs.umd.edu/hcil/jazz/"];
 	".net" [label=".NET", URL="http://de.wikipedia.org/wiki/.NET"];
 	"c++" [label="C++", URL="http://de.wikipedia.org/wiki/C%2B%2B"];
 	"local tools" [URL="http://doi.acm.org/10.1145/237091.237116"];
@@ -34,7 +36,9 @@ digraph G {
 	svg [label=SVG, URL="http://de.wikipedia.org/wiki/Scalable_Vector_Graphics"];
 	umd [label="University of Maryland", URL="http://www.cs.umd.edu/hcil/"];
 	zui [label=ZUI, URL="http://de.wikipedia.org/wiki/ZUI"];
+	safa [label="Mobile Safari", URL="http://www.apple.com/iphone/features/safari.html"];
 
+pi2 -> p2d;
 "pad++" -> "c++";
 "pad++" -> umd;
 "pad++" -> zui;
@@ -52,6 +56,7 @@ jazz -> darpa;
 jazz -> java2d;
 jazz -> nsf;
 jazz -> sg;
+safa -> zui;
 # jazz -> svg;
 kidpad -> "local tools";
 kidpad -> "pad++";
