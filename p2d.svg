@@ -10,7 +10,7 @@
  viewBox="0.00 0.00 1052.00 803.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 799)">
 <title>Piccolo2d Ueberblick</title>
-<polygon style="fill:#95a7d4;stroke:#95a7d4;" points="-4,4 -4,-799 1048,-799 1048,4 -4,4"/>
+<polygon style="fill:none;stroke:none;" points="-4,4 -4,-799 1048,-799 1048,4 -4,4"/>
 <text text-anchor="middle" x="522" y="-7.9" style="font-family:Times New Roman;font-size:14.00;">Piccolo2D Stammbaum</text>
 <!-- pi2 -->
 <g id="node1" class="node"><title>pi2</title>

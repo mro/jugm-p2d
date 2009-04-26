@@ -4,7 +4,7 @@
 */
 digraph "Piccolo2d Ueberblick" {
 	rankdir=LR;
-	graph [truecolor bgcolor="#95A7D4"]
+	graph [bgcolor=transparent]
 	label="Piccolo2D Stammbaum";
 	pi2 [label="piccolo2d", URL="http://piccolo2d.org/", fillcolor=lightblue2, style=filled];
 	p2d [label="piccolo", URL="http://www.cs.umd.edu/hcil/jazz/"];
