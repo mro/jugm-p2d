@@ -3,9 +3,10 @@
         See http://www.graphviz.org/Documentation.php
 */
 digraph "Piccolo2d Ueberblick" {
-	rankdir=LR;
-	graph [bgcolor=transparent]
 	label="Piccolo2D Stammbaum";
+	rankdir=LR;
+	graph [bgcolor=transparent];
+	node [target=_blank];
 	pi2 [label="piccolo2d", URL="http://piccolo2d.org/", fillcolor=lightblue2, style=filled];
 	p2d [label="piccolo", URL="http://www.cs.umd.edu/hcil/jazz/"];
 	".net" [label=".NET", URL="http://de.wikipedia.org/wiki/.NET"];

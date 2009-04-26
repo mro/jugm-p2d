@@ -14,14 +14,14 @@
 <text text-anchor="middle" x="522" y="-7.9" style="font-family:Times New Roman;font-size:14.00;">Piccolo2D Stammbaum</text>
 <!-- pi2 -->
 <g id="node1" class="node"><title>pi2</title>
-<a xlink:href="http://piccolo2d.org/" xlink:title="piccolo2d">
+<a xlink:href="http://piccolo2d.org/" xlink:title="piccolo2d" target="_blank">
 <ellipse style="fill:#b2dfee;stroke:black;" cx="59" cy="-588" rx="50.9221" ry="18"/>
 <text text-anchor="middle" x="59" y="-583.9" style="font-family:Times New Roman;font-size:14.00;">piccolo2d</text>
 </a>
 </g>
 <!-- p2d -->
 <g id="node2" class="node"><title>p2d</title>
-<a xlink:href="http://www.cs.umd.edu/hcil/jazz/" xlink:title="piccolo">
+<a xlink:href="http://www.cs.umd.edu/hcil/jazz/" xlink:title="piccolo" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="210" cy="-588" rx="40.9981" ry="18"/>
 <text text-anchor="middle" x="210" y="-583.9" style="font-family:Times New Roman;font-size:14.00;">piccolo</text>
 </a>
@@ -33,7 +33,7 @@
 </g>
 <!-- gdi -->
 <g id="node9" class="node"><title>gdi</title>
-<a xlink:href="http://de.wikipedia.org/wiki/GDI%2B" xlink:title="GDI+">
+<a xlink:href="http://de.wikipedia.org/wiki/GDI%2B" xlink:title="GDI+" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="393" cy="-723" rx="34.0492" ry="18"/>
 <text text-anchor="middle" x="393" y="-718.9" style="font-family:Times New Roman;font-size:14.00;">GDI+</text>
 </a>
@@ -45,7 +45,7 @@
 </g>
 <!-- jazz -->
 <g id="node16" class="node"><title>jazz</title>
-<a xlink:href="http://piccolo2d.org/learn/about.html" xlink:title="jazz">
+<a xlink:href="http://piccolo2d.org/learn/about.html" xlink:title="jazz" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="393" cy="-588" rx="27.1004" ry="18"/>
 <text text-anchor="middle" x="393" y="-583.9" style="font-family:Times New Roman;font-size:14.00;">jazz</text>
 </a>
@@ -57,7 +57,7 @@
 </g>
 <!-- ms -->
 <g id="node18" class="node"><title>ms</title>
-<a xlink:href="http://research.microsoft.com/" xlink:title="Microsoft Research">
+<a xlink:href="http://research.microsoft.com/" xlink:title="Microsoft Research" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="393" cy="-442" rx="89.8356" ry="18"/>
 <text text-anchor="middle" x="393" y="-437.9" style="font-family:Times New Roman;font-size:14.00;">Microsoft Research</text>
 </a>
@@ -69,28 +69,28 @@
 </g>
 <!-- .net -->
 <g id="node3" class="node"><title>.net</title>
-<a xlink:href="http://de.wikipedia.org/wiki/.NET" xlink:title=".NET">
+<a xlink:href="http://de.wikipedia.org/wiki/.NET" xlink:title=".NET" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="603" cy="-777" rx="31.9646" ry="18"/>
 <text text-anchor="middle" x="603" y="-772.9" style="font-family:Times New Roman;font-size:14.00;">.NET</text>
 </a>
 </g>
 <!-- c++ -->
 <g id="node4" class="node"><title>c++</title>
-<a xlink:href="http://de.wikipedia.org/wiki/C%2B%2B" xlink:title="C++">
+<a xlink:href="http://de.wikipedia.org/wiki/C%2B%2B" xlink:title="C++" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="829" cy="-307" rx="29.1851" ry="18"/>
 <text text-anchor="middle" x="829" y="-302.9" style="font-family:Times New Roman;font-size:14.00;">C++</text>
 </a>
 </g>
 <!-- local tools -->
 <g id="node5" class="node"><title>local tools</title>
-<a xlink:href="http://doi.acm.org/10.1145/237091.237116" xlink:title="local tools">
+<a xlink:href="http://doi.acm.org/10.1145/237091.237116" xlink:title="local tools" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="603" cy="-53" rx="52.1162" ry="18"/>
 <text text-anchor="middle" x="603" y="-48.9" style="font-family:Times New Roman;font-size:14.00;">local tools</text>
 </a>
 </g>
 <!-- pad++ -->
 <g id="node6" class="node"><title>pad++</title>
-<a xlink:href="http://www.cs.umd.edu/hcil/pad++/" xlink:title="PAD++">
+<a xlink:href="http://www.cs.umd.edu/hcil/pad++/" xlink:title="PAD++" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="603" cy="-215" rx="40.9981" ry="18"/>
 <text text-anchor="middle" x="603" y="-210.9" style="font-family:Times New Roman;font-size:14.00;">PAD++</text>
 </a>
@@ -102,7 +102,7 @@
 </g>
 <!-- umd -->
 <g id="node28" class="node"><title>umd</title>
-<a xlink:href="http://www.cs.umd.edu/hcil/" xlink:title="University of Maryland">
+<a xlink:href="http://www.cs.umd.edu/hcil/" xlink:title="University of Maryland" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="829" cy="-215" rx="105.818" ry="18"/>
 <text text-anchor="middle" x="829" y="-210.9" style="font-family:Times New Roman;font-size:14.00;">University of Maryland</text>
 </a>
@@ -114,7 +114,7 @@
 </g>
 <!-- zui -->
 <g id="node29" class="node"><title>zui</title>
-<a xlink:href="http://de.wikipedia.org/wiki/ZUI" xlink:title="ZUI">
+<a xlink:href="http://de.wikipedia.org/wiki/ZUI" xlink:title="ZUI" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="829" cy="-134" rx="27.1004" ry="18"/>
 <text text-anchor="middle" x="829" y="-129.9" style="font-family:Times New Roman;font-size:14.00;">ZUI</text>
 </a>
@@ -126,14 +126,14 @@
 </g>
 <!-- chevron -->
 <g id="node7" class="node"><title>chevron</title>
-<a xlink:href="http://www.chevron.com/" xlink:title="Chevron">
+<a xlink:href="http://www.chevron.com/" xlink:title="Chevron" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="603" cy="-723" rx="46.0565" ry="18"/>
 <text text-anchor="middle" x="603" y="-718.9" style="font-family:Times New Roman;font-size:14.00;">Chevron</text>
 </a>
 </g>
 <!-- darpa -->
 <g id="node8" class="node"><title>darpa</title>
-<a xlink:href="http://www.nsf.gov/" xlink:title="DARPA">
+<a xlink:href="http://www.nsf.gov/" xlink:title="DARPA" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="603" cy="-669" rx="43.0827" ry="18"/>
 <text text-anchor="middle" x="603" y="-664.9" style="font-family:Times New Roman;font-size:14.00;">DARPA</text>
 </a>
@@ -145,7 +145,7 @@
 </g>
 <!-- ge -->
 <g id="node10" class="node"><title>ge</title>
-<a xlink:href="http://de.wikipedia.org/wiki/Google_Earth" xlink:title="Google Earth">
+<a xlink:href="http://de.wikipedia.org/wiki/Google_Earth" xlink:title="Google Earth" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="603" cy="-107" rx="64.8203" ry="18"/>
 <text text-anchor="middle" x="603" y="-102.9" style="font-family:Times New Roman;font-size:14.00;">Google Earth</text>
 </a>
@@ -157,21 +157,21 @@
 </g>
 <!-- grap -->
 <g id="node11" class="node"><title>grap</title>
-<a xlink:href="http://de.wikipedia.org/wiki/Graph_(Graphentheorie)" xlink:title="Graph">
+<a xlink:href="http://de.wikipedia.org/wiki/Graph_(Graphentheorie)" xlink:title="Graph" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="1008" cy="-389" rx="36.1339" ry="18"/>
 <text text-anchor="middle" x="1008" y="-384.9" style="font-family:Times New Roman;font-size:14.00;">Graph</text>
 </a>
 </g>
 <!-- java -->
 <g id="node12" class="node"><title>java</title>
-<a xlink:href="http://de.wikipedia.org/wiki/Java_(Technik)" xlink:title="Java">
+<a xlink:href="http://de.wikipedia.org/wiki/Java_(Technik)" xlink:title="Java" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="829" cy="-525" rx="27.9903" ry="18"/>
 <text text-anchor="middle" x="829" y="-520.9" style="font-family:Times New Roman;font-size:14.00;">Java</text>
 </a>
 </g>
 <!-- java2d -->
 <g id="node13" class="node"><title>java2d</title>
-<a xlink:href="http://en.wikipedia.org/wiki/Java_2D" xlink:title="Java2D">
+<a xlink:href="http://en.wikipedia.org/wiki/Java_2D" xlink:title="Java2D" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="603" cy="-561" rx="39.8056" ry="18"/>
 <text text-anchor="middle" x="603" y="-556.9" style="font-family:Times New Roman;font-size:14.00;">Java2D</text>
 </a>
@@ -183,7 +183,7 @@
 </g>
 <!-- opengl -->
 <g id="node21" class="node"><title>opengl</title>
-<a xlink:href="http://de.wikipedia.org/wiki/Opengl" xlink:title="OpenGL">
+<a xlink:href="http://de.wikipedia.org/wiki/Opengl" xlink:title="OpenGL" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="829" cy="-462" rx="45.8622" ry="18"/>
 <text text-anchor="middle" x="829" y="-457.9" style="font-family:Times New Roman;font-size:14.00;">OpenGL</text>
 </a>
@@ -195,7 +195,7 @@
 </g>
 <!-- java3d -->
 <g id="node14" class="node"><title>java3d</title>
-<a xlink:href="http://de.wikipedia.org/wiki/Java_3D" xlink:title="Java3D">
+<a xlink:href="http://de.wikipedia.org/wiki/Java_3D" xlink:title="Java3D" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="603" cy="-507" rx="39.8056" ry="18"/>
 <text text-anchor="middle" x="603" y="-502.9" style="font-family:Times New Roman;font-size:14.00;">Java3D</text>
 </a>
@@ -212,7 +212,7 @@
 </g>
 <!-- sg -->
 <g id="node26" class="node"><title>sg</title>
-<a xlink:href="http://de.wikipedia.org/wiki/Szenengraph" xlink:title="Szenengraph">
+<a xlink:href="http://de.wikipedia.org/wiki/Szenengraph" xlink:title="Szenengraph" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="829" cy="-389" rx="63.9292" ry="18"/>
 <text text-anchor="middle" x="829" y="-384.9" style="font-family:Times New Roman;font-size:14.00;">Szenengraph</text>
 </a>
@@ -224,14 +224,14 @@
 </g>
 <!-- javafx -->
 <g id="node15" class="node"><title>javafx</title>
-<a xlink:href="http://de.wikipedia.org/wiki/JavaFX" xlink:title="JavaFX">
+<a xlink:href="http://de.wikipedia.org/wiki/JavaFX" xlink:title="JavaFX" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="210" cy="-342" rx="39.8056" ry="18"/>
 <text text-anchor="middle" x="210" y="-337.9" style="font-family:Times New Roman;font-size:14.00;">JavaFX</text>
 </a>
 </g>
 <!-- scenegraph -->
 <g id="node24" class="node"><title>scenegraph</title>
-<a xlink:href="https://scenegraph.dev.java.net/" xlink:title="scenegraph">
+<a xlink:href="https://scenegraph.dev.java.net/" xlink:title="scenegraph" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="393" cy="-342" rx="56.9803" ry="18"/>
 <text text-anchor="middle" x="393" y="-337.9" style="font-family:Times New Roman;font-size:14.00;">scenegraph</text>
 </a>
@@ -263,7 +263,7 @@
 </g>
 <!-- nsf -->
 <g id="node19" class="node"><title>nsf</title>
-<a xlink:href="http://www.nsf.gov/" xlink:title="NSF">
+<a xlink:href="http://www.nsf.gov/" xlink:title="NSF" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="603" cy="-615" rx="27.9903" ry="18"/>
 <text text-anchor="middle" x="603" y="-610.9" style="font-family:Times New Roman;font-size:14.00;">NSF</text>
 </a>
@@ -280,7 +280,7 @@
 </g>
 <!-- kidpad -->
 <g id="node17" class="node"><title>kidpad</title>
-<a xlink:href="http://www.cs.umd.edu/hcil/kiddesign/kidpad.shtml" xlink:title="KidPad">
+<a xlink:href="http://www.cs.umd.edu/hcil/kiddesign/kidpad.shtml" xlink:title="KidPad" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="393" cy="-134" rx="39.8056" ry="18"/>
 <text text-anchor="middle" x="393" y="-129.9" style="font-family:Times New Roman;font-size:14.00;">KidPad</text>
 </a>
@@ -297,7 +297,7 @@
 </g>
 <!-- ogre -->
 <g id="node20" class="node"><title>ogre</title>
-<a xlink:href="http://de.wikipedia.org/wiki/OGRE" xlink:title="OGRE">
+<a xlink:href="http://de.wikipedia.org/wiki/OGRE" xlink:title="OGRE" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="603" cy="-361" rx="37.0233" ry="18"/>
 <text text-anchor="middle" x="603" y="-356.9" style="font-family:Times New Roman;font-size:14.00;">OGRE</text>
 </a>
@@ -319,7 +319,7 @@
 </g>
 <!-- osg -->
 <g id="node22" class="node"><title>osg</title>
-<a xlink:href="http://en.wikipedia.org/wiki/OpenSceneGraph" xlink:title="OpenSceneGraph">
+<a xlink:href="http://en.wikipedia.org/wiki/OpenSceneGraph" xlink:title="OpenSceneGraph" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="603" cy="-307" rx="82.1898" ry="18"/>
 <text text-anchor="middle" x="603" y="-302.9" style="font-family:Times New Roman;font-size:14.00;">OpenSceneGraph</text>
 </a>
@@ -341,14 +341,14 @@
 </g>
 <!-- posy -->
 <g id="node23" class="node"><title>posy</title>
-<a xlink:href="http://www.ted.com/index.php/talks/blaise_aguera_y_arcas_demos_photosynth.html" xlink:title="PhotoSynth">
+<a xlink:href="http://www.ted.com/index.php/talks/blaise_aguera_y_arcas_demos_photosynth.html" xlink:title="PhotoSynth" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="59" cy="-138" rx="57.8712" ry="18"/>
 <text text-anchor="middle" x="59" y="-133.9" style="font-family:Times New Roman;font-size:14.00;">PhotoSynth</text>
 </a>
 </g>
 <!-- seadragon -->
 <g id="node25" class="node"><title>seadragon</title>
-<a xlink:href="http://en.wikipedia.org/wiki/DeepZoom" xlink:title="SeaDragon">
+<a xlink:href="http://en.wikipedia.org/wiki/DeepZoom" xlink:title="SeaDragon" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="210" cy="-138" rx="55.0898" ry="18"/>
 <text text-anchor="middle" x="210" y="-133.9" style="font-family:Times New Roman;font-size:14.00;">SeaDragon</text>
 </a>
@@ -385,7 +385,7 @@
 </g>
 <!-- svg -->
 <g id="node27" class="node"><title>svg</title>
-<a xlink:href="http://de.wikipedia.org/wiki/Scalable_Vector_Graphics" xlink:title="SVG">
+<a xlink:href="http://de.wikipedia.org/wiki/Scalable_Vector_Graphics" xlink:title="SVG" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="603" cy="-453" rx="30.7734" ry="18"/>
 <text text-anchor="middle" x="603" y="-448.9" style="font-family:Times New Roman;font-size:14.00;">SVG</text>
 </a>
@@ -397,7 +397,7 @@
 </g>
 <!-- safa -->
 <g id="node30" class="node"><title>safa</title>
-<a xlink:href="http://www.apple.com/iphone/features/safari.html" xlink:title="Mobile Safari">
+<a xlink:href="http://www.apple.com/iphone/features/safari.html" xlink:title="Mobile Safari" target="_blank">
 <ellipse style="fill:none;stroke:black;" cx="603" cy="-161" rx="64.8203" ry="18"/>
 <text text-anchor="middle" x="603" y="-156.9" style="font-family:Times New Roman;font-size:14.00;">Mobile Safari</text>
 </a>
