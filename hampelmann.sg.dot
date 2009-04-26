@@ -1,0 +1,18 @@
+#!/usr/bin/dot -Tpdf -o hampelmann.sg.pdf
+/*
+        See http://www.graphviz.org/Documentation.php
+*/
+digraph "Hampelmann Scenegraph" {
+	rankdir=TB;
+	graph [truecolor bgcolor="#95A7D4"]
+	label="Hampelmann Scenegraph";
+	
+	universe -> torso;
+	torso -> left_arm;
+	torso -> left_leg;
+	torso -> head;
+	torso -> right_leg;
+	left_leg -> left_foot;
+	right_leg -> right_foot;
+	torso -> right_arm;
+}
