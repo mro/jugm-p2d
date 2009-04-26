@@ -4,7 +4,7 @@
 */
 digraph "Hampelmann Scenegraph" {
 	rankdir=TB;
-	graph [truecolor bgcolor="#95A7D4"]
+	graph [bgcolor=transparent]
 	label="Hampelmann Scenegraph";
 	
 	universe -> torso;
