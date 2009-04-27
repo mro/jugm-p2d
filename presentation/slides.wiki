@@ -1,0 +1,164 @@
+~~SLIDESHOW~~
+
+= Piccolo2D @ JUGM
+ein Referat von Marcus Rohrmoser, 
+dem Kopf hinter [[http://aladin-software.mobi|aladin-software.mobi]].
+
+[[http://www.jugm.de/|{{ http://www.jugm.de/pics/jugm-logo.gif}}]]
+[[http://piccolo2d.org|{{http://piccolo2d.org/images/Piccolo2D-Logo.png }}]] 
+
+-----
+
+Anmerkung zu dieser Wiki Seite: 
+
+Manches hier sieht in Layout und Farbe ein wenig seltsam aus, da es in erster Linie bei der [[http://wiki.aladin-software.de/_export/s5/jugm/p2d|Präsentation]] passen muß.
+
+Als Präsentationswerkzeug habe ich das [[http://www.dokuwiki.org/plugin:s5|Dokuwiki S5 Plugin]] gewählt, da's mir am einfachsten schien und komplett ohne Flash/Office/etc. auskommt. Ein moderner Web-Browser genügt.
+
+== Was ist Piccolo2D?
+{{ http://github.com/mro/jugm-p2d/raw/master/demos/hampelmann/src/main/resources/sprattelgube.png?300}}
+ * 2D Scenegraph API für Java und .Net,
+ * Spezialitäten:
+  * Zooming,
+  * Animation,
+  * Mehransichtigkeit -- z.B. gleichzeitige Detailansicht //und// Vogelperspektive,
+ * sehr kompakt -- [[http://www.piccolo2d.org/doc/piccolo2d.java/release-1.2.1/apidocs/|wenige Klassen]], [[http://repo2.maven.org/maven2/org/piccolo2d/piccolo2d-core/1.2.1/|jar ~80 KB]].
+
+----
+ * benutzt intensiv [[http://java.sun.com/docs/books/tutorial/2d/index.html|java2d]] (ohne Compositing) und v.a. [[http://java.sun.com/j2se/1.4.2/docs/api/java/awt/geom/AffineTransform.html|AffineTransform]],
+ * ist [[http://piccolo2d.org/learn/about.html|recht alt]] und wurde in 2 1/2 Sprachen (Java/C#/C# Mobile) implementiert => konzeptionell sehr ausgereift,
+
+== Exkurs: Scenegraph
+{{ http://github.com/mro/jugm-p2d/raw/master/hampelmann.sg.svg?400}}
+ * Datenmodell von Zeichnungsbausteinen ("universe")
+ * meist als [[http://de.wikipedia.org/wiki/Baum_(Graphentheorie)|Baum]] repräsentiert,
+ * reine Lehre: 
+  * Zeichnen der Elemente per [[http://de.wikipedia.org/wiki/Tiefensuche|Depth-First Traversierung]]
+  * Knoten gruppieren und manipulieren (z.B. [[http://de.wikipedia.org/wiki/Affine_Abbildung|Koordinaten Trafo]]),
+  * Blätter enthalten Graphikelelemente (Kurven, Bitmaps, etc.),
+
+----
+ * in 3D üblich, 2D eher selten.
+
+== Wobei hilft mir Piccolo2D?
+ * zur Laufzeit synthetisierte (komplexe) 2D Graphiken,
+ * veränderliche Bildinhalte,
+ * veränderliche Bildausschnitte und Effekte.
+ * Bildelemente finden (z.B. mit der Maus klicken) aka. "Object Picking"
+
+
+
+== Wie benutze ich Piccolo2D?
+ * jar einbinden (ideal per Maven Dependency)
+ * PCanvas in eine Komponente (JFrame) einfügen
+ * Scenegraph aufbauen und in PCanvas einhängen
+ * Controller als Event Handler in PCanvas einhängen
+
+== Bsp: Hampelmann Treiber
+<code java>
+public static void main(final String[] args) {
+  final JFrame frame = new JFrame();
+  frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+  final PCanvas canvas = new PCanvas();
+  frame.add(canvas);
+  // Scenegraph:
+  final Model model = new Model();
+  final PNode world = createScene(model);
+  canvas.getLayer().addChild(world);
+  // Controller:
+  canvas.addInputEventListener(new Controller(model, world));
+
+  frame.setSize(600, 700);
+  frame.setVisible(true);
+}
+</code>
+-----
+ * [[http://piccolo2d.org/doc/piccolo2d.java/release-1.2.1/apidocs/edu/umd/cs/piccolo/PCanvas.html|PCanvas]]
+ * [[http://piccolo2d.org/doc/piccolo2d.java/release-1.2.1/apidocs/edu/umd/cs/piccolo/PCamera.html|PCamera]]
+
+== Bsp: Hampelmann Scenegraph
+<code java>
+private static final PNode createScene(final Model m) {
+  final PNode torso;
+  PNode tmp;
+  final PNode universe = new PNode();
+  universe.addChild(torso = load("/torso.png"));
+  universe.addChild(load("/hand.png"));
+  torso.addChild(load("/kopf.png"));
+  torso.addChild(load("/linker_arm.png"));
+  torso.addChild(tmp = load("/linkes_bein.png"));
+  tmp.addChild(load("/linker_fuss.png"));
+  torso.addChild(load("/rechter_arm.png"));
+  torso.addChild(tmp = load("/rechtes_bein.png"));
+  tmp.addChild(load("/rechter_fuss.png"));
+  return universe;
+}
+</code>
+
+
+== Bsp: Hampelmann Controller
+<code java>
+public void mousePressed(final PInputEvent arg0) {
+  p0.setLocation(arg0.getPosition());
+  pull0 = pull;
+  // super.mousePressed(arg0);
+}
+
+public void mouseDragged(final PInputEvent arg0) {
+  arg0.setHandled(true);
+  final double _dy = arg0.getPosition().getY() - p0.getY();
+  setPull(pull0 + _dy / dy);
+}
+</code>
+
+----
+ * [[http://piccolo2d.org/doc/piccolo2d.java/release-1.2.1/apidocs/edu/umd/cs/piccolo/event/PInputEventListener.html|PInputEventListener]]
+ * [[http://piccolo2d.org/doc/piccolo2d.java/release-1.2.1/apidocs/edu/umd/cs/piccolo/event/PInputEvent.html|PInputEvent]]
+
+== Exkurs: Design Patterns & MVC
+ * [[http://piccolo2d.org/learn/patterns.html|ZUI Patterns]] - vor allem
+  * [[http://piccolo2d.org/learn/patterns.html#Piccolo2D_Framework_Design|Zentrale Klassen]]
+  * [[http://piccolo2d.org/learn/patterns.html#Coordinate_Systems|Koordinatensysteme]]
+  * [[http://piccolo2d.org/learn/patterns.html#Semantic_Zooming|Zoom Kontext]]
+ * [[http://de.wikipedia.org/wiki/Model_View_Controller|MVC]] naheliegend:
+  * View = Scenegraph + PCanvas + PCamera
+  * Controller = Event Handler
+  * Model = Custom Classes
+
+== Woher kommt Piccolo2D?
+
+{{ http://github.com/mro/jugm-p2d/raw/master/p2d.svg?800}}
+
+----
+
+[[http://mro.name/jugm/p2d.svg|als SVG Bild, ergo sinnvoll klickbar.]]
+
+== Wer benutzt Piccolo2D?
+unter anderem:
+ * http://phet.colorado%2eedu/
+ * http://jcurl.org/wiki/JCurlShotPlanner
+
+Eine umfassendere Liste:
+ * http://piccolo2d.org/applications/
+
+== Vielen Dank
+
+für Ihre Aufmerksamkeit.
+
+Quellen und Handout zum Nachlesen gibt's hier:
+
+http://alsw.mobi/go/jugm
+
+=== Lizenz
+[[http://creativecommons.org/licenses/by-sa/3.0/de/|Creative Commons by-sa]]
+{{http://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Cc-by_new.svg/20px-Cc-by_new.svg.png}}
+{{http://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Cc-sa.svg/20px-Cc-sa.svg.png}}
+
+----
+ * Präsentation: http://wiki.aladin-software.de/_export/s5/jugm/p2d
+ * Quellen zum Referat: http://github.com/mro/jugm-p2d/
+ * p2d Homepage: http://piccolo2d.org
+ * p2d Maven Repo: http://repo2.maven.org/maven2/org/piccolo2d/
+ * p2d %%JavaDocs%%: http://www.piccolo2d.org/doc/piccolo2d.java/release-1.2.1/apidocs/
+ * p2d Metriken: http://www.ohloh.net/p/piccolo2d
