@@ -15,6 +15,8 @@ import edu.umd.cs.piccolo.event.PInputEvent;
 import edu.umd.cs.piccolo.nodes.PImage;
 
 /**
+ * Demo for the talk http://alsw.mobi/go/jugm
+ * 
  * @author mro@alsw.mobi
  */
 public class Driver {
@@ -27,10 +29,9 @@ public class Driver {
 		private double pull = -1;
 		private double pull0 = 0;
 		private final PNode rechter_arm, rechtes_bein, rechter_fuss;
-
 		private final PNode torso, kopf, hand;
 
-		public Controller(final Model m, final PNode view) {
+		public Controller(final PNode view) {
 			torso = add(view, 0, "/torso.png");
 			torso.translate(200, 200);
 			hand = add(view, 1, "/hand.png");
@@ -60,11 +61,6 @@ public class Driver {
 			// super.mousePressed(arg0);
 		}
 
-		public void mouseReleased(final PInputEvent arg0) {
-			// TODO Auto-generated method stub
-			super.mouseReleased(arg0);
-		}
-
 		public void setPull(double pull) {
 			if (pull < 0)
 				pull = 0;
@@ -73,8 +69,8 @@ public class Driver {
 			if (Math.abs(this.pull - pull) < 1e-3)
 				return;
 			this.pull = pull;
-			System.out.println(pull);
-			// do the mechanics
+			// System.out.println(pull);
+			// do the mechanics:
 			hand.setOffset(250, 700 + this.pull * dy - dy);
 			kopf.setOffset(25, -100);
 
@@ -106,18 +102,6 @@ public class Driver {
 		}
 	}
 
-	private static class Model {
-		private double pull;
-
-		public double getPull() {
-			return pull;
-		}
-
-		public void setPull(final double pull) {
-			this.pull = pull;
-		}
-	}
-
 	private static class MyException extends RuntimeException {
 		private static final long serialVersionUID = 1L;
 
@@ -134,7 +118,7 @@ public class Driver {
 		return ret;
 	}
 
-	private static final PNode createScene(final Model m) {
+	private static final PNode createScene() {
 		final PNode torso;
 		PNode tmp;
 		final PNode universe = new PNode();
@@ -172,10 +156,9 @@ public class Driver {
 
 		final PCanvas canvas = new PCanvas();
 		frame.add(canvas);
-		final Model model = new Model();
-		final PNode world = createScene(model);
+		final PNode world = createScene();
 		canvas.getLayer().addChild(world);
-		canvas.addInputEventListener(new Controller(model, world));
+		canvas.addInputEventListener(new Controller(world));
 
 		frame.setSize(600, 700);
 		frame.setVisible(true);
